@@ -1,0 +1,11 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: gameshop
+      username: mongo
+      password: mongo
+
+server:
+  port: 8081

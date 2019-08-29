@@ -1,0 +1,25 @@
+schema {
+    query: CartQuery
+    mutation: CartMutation
+}
+
+type Cart {
+    id: ID!
+    userName: String!
+    itens: [Item]!
+}
+
+type Item {
+    id: ID!
+    type: String!
+    value: Float
+}
+
+type CartQuery {
+    findAllCarts: [Cart]
+    findCartByUser(userName: String): Cart!
+}
+
+type CartMutation {
+    addItemToCart(cartId: ID, value: Float, type: String): Cart!
+}
